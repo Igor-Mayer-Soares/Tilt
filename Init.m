@@ -58,6 +58,12 @@ lin_hr = 0;
 InitProp
 InitAero
 
+% Actuators
+G_act = tf(4.38e6,[1 2929.9 4.38e6]);
+
+% ESC
+G_esc = tf(1,[50e-3 1]);
+
 %% Trim Fixed Wing
 if trim_fw
     alt = 30:10:100;
@@ -76,8 +82,8 @@ if trim_fw
                 result_cruise(cont).opreport  = opreport;
                 result_cruise(cont).trimmed   = 1;
             else
-                result_cruise(cont).op        = [];
-                result_cruise(cont).opreport  = [];
+                result_cruise(cont).op        = op; 
+                result_cruise(cont).opreport  = opreport;
                 result_cruise(cont).trimmed   = 0;
             end
             waitbar(cont/((length(alt)*length(V))), trim_progress, ...
@@ -96,7 +102,7 @@ if lin_fw
     lin_progress = waitbar(0,'Linearizing');
     stateorder = {'u','w','q','theta','Ze','v','p','r','phi','psi','Xe','Ye'};
     inputname = {'ail','ele','rud','thr1','thr2','thr3','thr4','lambda1','lambda2'};
-    outputname = {'ax','ay','az','p','q','r','phi','theta','psi','TAS','alpha','beta','H','velZ','lat_deg','lon_deg','Alt_m','GroundSpeed','Course'};
+    outputname = {'ax','ay','az','p','q','r','phi','theta','psi','TAS','alpha','beta','posX','posY','H','velZ','velX','velY'};
     for cont = 1:length(result_cruise)
         if result_cruise(cont).trimmed
             result_cruise(cont).G = linearize('GT_trim',result_cruise(cont).op,'StateOrder',stateorder);
@@ -118,7 +124,7 @@ end
 if trim_hr
     trim_progress = waitbar(0,'Trimming');
 
-    [op,opreport]          = trim_hover('GT_trim',(H0+alt));
+    [op,opreport]          = trim_hover('GT_trim',(H0+alt(1)));
     result_hover.alt       = 30;
     result_hover.V         = 0;
     result_hover.op        = op;
@@ -136,7 +142,7 @@ if lin_hr
     lin_progress = waitbar(0,'Linearizing');
     stateorder = {'u','w','q','theta','Ze','v','p','r','phi','psi','Xe','Ye'};
     inputname = {'ail','ele','rud','thr1','thr2','thr3','thr4','lambda1','lambda2'};
-    outputname = {'ax','ay','az','p','q','r','phi','theta','psi','TAS','alpha','beta','H','velZ','lat_deg','lon_deg','Alt_m','GroundSpeed','Course'};
+    outputname = {'ax','ay','az','p','q','r','phi','theta','psi','TAS','alpha','beta','posX','posY','H','velZ','velX','velY'};
     result_hover.G = linearize('GT_trim',result_hover.op,'StateOrder',stateorder);
     result_hover.G.InputName = inputname;
     result_hover.G.OutputName = outputname;

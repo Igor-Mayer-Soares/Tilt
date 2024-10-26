@@ -4,11 +4,11 @@ close all
 alpha_vec = -10:1:12;
 beta_vec = -5:1:5;
 
-% for cont1 = 1:length(alpha_vec)
-%     for cont = 1:length(beta_vec)
-%         avl_run('tilt',alpha_vec(cont1),beta_vec(cont))
-%     end
-% end
+for cont1 = 1:length(alpha_vec)
+    for cont = 1:length(beta_vec)
+        avl_run('tilt',alpha_vec(cont1),beta_vec(cont))
+    end
+end
 
 % Pasta onde estão os arquivos .st
 folderPath = 'Database';
@@ -58,9 +58,9 @@ for fileIdx = 1:length(files)
 end
 
 % Salva cada tabela com o nome do coeficiente
-% for i = 1:length(coefNames)
-%     writetable(coefData.(coefNames{i}), strcat(coefNames{i}, '_table.csv'));
-% end
+for i = 1:length(coefNames)
+    writetable(coefData.(coefNames{i}), strcat(coefNames{i}, '_table.csv'));
+end
 
 % Obtem os nomes das tabelas dentro da estrutura coefData
 tableNames = fieldnames(coefData);

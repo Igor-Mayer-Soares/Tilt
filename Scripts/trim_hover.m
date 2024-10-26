@@ -156,8 +156,8 @@ opspec.Inputs(9).u = 0;
 opspec.Outputs(10).Known = true;
 opspec.Outputs(10).y = 0;
 
-opspec.Outputs(13).Known = true;
-opspec.Outputs(13).y = alt;
+opspec.Outputs(15).Known = true;
+opspec.Outputs(15).y = alt;
 
 % Output (14) - GT_trim/nz
 % - Default model initial conditions are used to initialize optimization.

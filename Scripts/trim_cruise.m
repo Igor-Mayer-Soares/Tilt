@@ -71,8 +71,8 @@ opspec.States(11).x = 0;
 
 % State (12) - GT_trim/GT/ /xe,ye,ze
 % - Default model initial conditions are used to initialize optimization.
-opspec.States(12).Known = true;
-opspec.States(12).x = -H;
+% opspec.States(12).Known = true;
+% opspec.States(12).x = -H;
 
 %% Set the constraints on the inputs in the model.
 % - The defaults for all inputs are Known = false, Min = -Inf, and
@@ -85,8 +85,8 @@ opspec.Inputs(1).u = 0;
 
 % Input (2) - GT_trim/elevator
 % - Default model initial conditions are used to initialize optimization.
-opspec.Inputs(2).Min = -25;
-opspec.Inputs(2).Max = 25;
+opspec.Inputs(2).Min = -30;
+opspec.Inputs(2).Max = 30;
 opspec.Inputs(2).u = -2;
 
 % Input (3) - GT_trim/rudder
@@ -94,22 +94,22 @@ opspec.Inputs(2).u = -2;
 opspec.Inputs(3).Known = true;
 opspec.Inputs(3).u = 0;
 
-% Input (4) - GT_trim/rpm1
-opspec.Inputs(4).u = 19000;
-opspec.Inputs(4).Min = 1000;
-opspec.Inputs(4).Max = 19000;
+% Input (4) - GT_trim/thr1
+opspec.Inputs(4).u = 1;
+opspec.Inputs(4).Min = 0;
+opspec.Inputs(4).Max = 1;
 
-% Input (5) - GT_trim/rpm2
-opspec.Inputs(5).u = 19000;
-opspec.Inputs(5).Min = 1000;
-opspec.Inputs(5).Max = 19000;
+% Input (5) - GT_trim/thr2
+opspec.Inputs(5).u = 1;
+opspec.Inputs(5).Min = 0;
+opspec.Inputs(5).Max = 1;
 
-% Input (6) - GT_trim/rpm3
+% Input (6) - GT_trim/thr3
 % - Default model initial conditions are used to initialize optimization.
 opspec.Inputs(6).Known = true;
 opspec.Inputs(6).u = 0;
 
-% Input (7) - GT_trim/rpm4
+% Input (7) - GT_trim/thr4
 % - Default model initial conditions are used to initialize optimization.
 opspec.Inputs(7).Known = true;
 opspec.Inputs(7).u = 0;
@@ -127,11 +127,15 @@ opspec.Inputs(9).Known = true;
 % Max = Inf.
 
 % Output (13) - GT_trim/V
-opspec.Outputs(13).y = V;
-opspec.Outputs(13).Known = true;
+opspec.Outputs(10).y = V;
+opspec.Outputs(10).Known = true;
 
 % Output (14) - GT_trim/nz
-opspec.Outputs(14).y = 1;
+opspec.Outputs(3).y = -9.7883;
+
+% Output (13) - GT_trim/V
+opspec.Outputs(15).y = H;
+opspec.Outputs(15).Known = true;
 
 %% Create the options
 opt = findopOptions('DisplayReport','true');
