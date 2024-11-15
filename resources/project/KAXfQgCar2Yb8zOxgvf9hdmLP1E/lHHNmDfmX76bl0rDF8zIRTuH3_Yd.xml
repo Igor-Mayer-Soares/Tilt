@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/prop.mat" GroupUUID="" Icon="" Name="prop" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="e845f39d-27ab-447e-a19f-7d49e9ad182a"/>
+</Info>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/initcond.mat" GroupUUID="" Icon="" Name="initcond" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="eb4a3afd-5c1e-48dc-bd0d-abc9559765ec"/>
+</Info>

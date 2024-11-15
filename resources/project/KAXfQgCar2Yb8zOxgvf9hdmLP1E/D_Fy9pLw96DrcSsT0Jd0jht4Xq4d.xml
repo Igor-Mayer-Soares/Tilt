@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/cb.mat" GroupUUID="" Icon="" Name="cb" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="d1d6b5bf-0a52-40a7-ad9c-761be7e9fb18"/>
+</Info>
