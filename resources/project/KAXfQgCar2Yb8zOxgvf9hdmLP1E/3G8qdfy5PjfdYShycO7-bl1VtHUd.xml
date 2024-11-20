@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/cmdQUADBus.mat" GroupUUID="" Icon="" Name="cmdQUADBus" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="9ebf7389-a6ff-4bc1-ba90-60cdd6918a95"/>
+</Info>

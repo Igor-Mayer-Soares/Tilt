@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/rates.mat" GroupUUID="" Icon="" Name="rates" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="09a05b0e-a534-434e-a6d7-de77a81a0231"/>
+</Info>

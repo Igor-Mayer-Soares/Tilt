@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/sensorsBus.mat" GroupUUID="" Icon="" Name="sensorsBus" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="267fd911-d67a-4692-b456-5c3a1520c26b"/>
+</Info>

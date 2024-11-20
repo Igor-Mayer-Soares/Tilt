@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/cmdHoverBus.mat" GroupUUID="" Icon="" Name="cmdHoverBus" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="12f35c94-d3f7-4554-b263-fddd23bd5871"/>
+</Info>

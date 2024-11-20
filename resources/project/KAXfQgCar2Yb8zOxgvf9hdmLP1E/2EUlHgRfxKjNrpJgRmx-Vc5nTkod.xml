@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/gains.mat" GroupUUID="" Icon="" Name="gains" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="63c04627-9d05-4ab8-a6ee-05fa64593643"/>
+</Info>

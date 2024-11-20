@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/params.mat" GroupUUID="" Icon="" Name="params" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="5fd1435b-8485-4bfe-b95f-05d45d2f0444"/>
+</Info>

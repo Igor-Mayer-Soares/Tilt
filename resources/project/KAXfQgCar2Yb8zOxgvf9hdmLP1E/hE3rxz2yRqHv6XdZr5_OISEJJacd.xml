@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="AirframeInit/result_cruise.mat" GroupUUID="" Icon="" Name="result_cruise" Type="StartUp" Visible="0">
+    <Extension Name="StartUpPrev" Value="ddf1f2f8-45f8-4482-97ba-5357521e88b8"/>
+</Info>
