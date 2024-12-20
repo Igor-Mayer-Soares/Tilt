@@ -147,6 +147,8 @@ int main()
 {
     printf("Hello, World!\n"); // Imprime "Hello, World!" na tela
     
+    GNC_Status_t status = GNC_NOERROR;
+
     GNC_State_t gncState;
     GNC_Output_t gncOutput;
     GNC_Input_t gncInput;
@@ -164,9 +166,10 @@ int main()
 
     GNC_Init(&gncState,&gncOutput);
 
-    GNC_Update(&gncInput,&gncState,&gncOutput);
+    status = GNC_Update(&gncInput,&gncState,&gncOutput);
 
     printf("T %f\n",gncOutput.thr1);
+    printf("status %u\n",status);
     
     return 0; // Indica que o programa foi executado com sucesso
 }

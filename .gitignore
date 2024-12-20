@@ -2,3 +2,8 @@
 */slprj
 *\slprj
 *.asv
+*.obj
+*.exe
+*/*.obj;
+*/obj/*
+C/MyProgram.exe
