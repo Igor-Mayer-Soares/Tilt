@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build MMA DLL",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-shared",
+                "-o", "${workspaceFolder}/GNC/MMA/MMA.dll",
+                "${workspaceFolder}/GNC/MMA/MMA.c",        
+                "-I${workspaceFolder}/GNC/MMA",            
+                "-I${workspaceFolder}/GNC/Libraries",      
+                "-fPIC"                                    
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila o MMA para uma DLL"
+        },
+        {
+            "label": "Build PID DLL",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-shared",
+                "-o", "${workspaceFolder}/GNC/Libraries/PID.dll",
+                "${workspaceFolder}/GNC/Libraries/PID.c",        
+                "-I${workspaceFolder}/GNC/Libraries",      
+                "-fPIC"                                    
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila o PID para uma DLL"
+        },
+        {
+            "label": "Build PosControl DLL",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-shared",
+                "-o", "${workspaceFolder}/GNC/QUAD/PosControl.dll",
+                "${workspaceFolder}/GNC/QUAD/PosControl.c",               
+                "-I${workspaceFolder}/GNC/Libraries",
+                "-I${workspaceFolder}/GNC/Libraries/mathc",      
+                "-fPIC"                                    
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila o PosControl para uma DLL"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "mma.h": "c",
+        "rtwtypes.h": "c",
+        "math.h": "c",
+        "gnc.h": "c",
+        "ap.h": "c",
+        "corecrt_math.h": "c",
+        "cmath": "cpp",
+        "compare": "c",
+        "cstddef": "c",
+        "type_traits": "c",
+        "xutility": "c",
+        "limits": "cpp"
+    }
+}

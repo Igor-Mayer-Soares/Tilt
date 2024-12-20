@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "compare": "cpp",
+        "cstddef": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "xutility": "cpp",
+        "sm.h": "c",
+        "xtr1common": "c",
+        "gnc.h": "c",
+        "atp.h": "c",
+        "pid.h": "c",
+        "mission.h": "c",
+        "params.h": "c",
+        "cmath": "c",
+        "math_utils.h": "c",
+        "types.h": "c",
+        "stdio.h": "c"
+    }
+}

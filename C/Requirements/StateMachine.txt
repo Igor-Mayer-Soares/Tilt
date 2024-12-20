@@ -1,0 +1,32 @@
+A máquina de modos e estados deverá ser composta por
+
+Modos:
+FW      --> Fixed Wind
+Quad    --> Quadcopter
+
+SubModos:
+Manual  --> FW/QUAD
+Auto    --> FW/QUAD
+Test    --> FW/QUAD
+
+Estados:
+Manual   --> Manual/
+TakeOff  --> Auto/
+Cruise   --> Auto/Manual
+Land     --> Auto/
+Loiter   --> Auto/Manual
+GoAround --> Auto/
+
+SubEstados:
+Manual           --> Manual/
+Run              --> TakeOff/Land
+Climb            --> TakeOff/Cruise
+TakeOffComplete  --> TakeOff/
+Level            --> Cruise/
+Approach         --> Land/
+Descent          --> Land/
+Flare            --> Land/
+LandComplete     --> Land/
+
+
+

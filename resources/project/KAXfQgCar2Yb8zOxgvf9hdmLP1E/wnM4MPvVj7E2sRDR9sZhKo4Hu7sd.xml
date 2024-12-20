@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Info File="Startups/TakeOffHover.m" GroupUUID="" Icon="" Name="TakeOffHover" Type="StartUp" Visible="0">
+<Info File="AirframeInit/pilotBus.mat" GroupUUID="" Icon="" Name="pilotBus" Type="StartUp" Visible="0">
     <Extension Name="StartUpPrev" Value="23ebf228-1d74-4a98-96c9-0a656b7cfe8c"/>
 </Info>
